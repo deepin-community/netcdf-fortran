@@ -1,0 +1,68 @@
+'\" -*- coding: us-ascii -*-
+.if \n(.g .ds T< \\FC
+.if \n(.g .ds T> \\F[\n[.fam]]
+.de URL
+\\$2 \(la\\$1\(ra\\$3
+..
+.if \n(.g .mso www.tmac
+.TH nf-config 1 "15 January 2015" "" ""
+.SH NAME
+nf-config \- query netCDF Fortran build options
+.SH SYNOPSIS
+'nh
+.fi
+.ad l
+\fBnf-config\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+[\fB--libs\fR] [\fB--cflags\fR] [\fB--cxxflags\fR] [\fB--defines\fR] [\fB--includes\fR] [\fB--version\fR]
+'in \n(.iu-\nxu
+.ad b
+'hy
+.SH DESCRIPTION
+\fBnf-config\fR allows querying the options used to
+build the netCDF Fortran library.
+.SH OPTIONS
+.TP 
+\*(T<\fB\-\-all\fR\*(T>
+Display all options
+.TP 
+\*(T<\fB\-\-cc\fR\*(T>
+C compiler
+.TP 
+\*(T<\fB\-\-fc\fR\*(T>
+Fortran compiler
+.TP 
+\*(T<\fB\-\-cflags\fR\*(T>
+Pre-processor and compiler flags
+.TP 
+.TP 
+\*(T<\fB\-\-fflags\fR\*(T>
+Flags needed to compile a Fortran program
+.TP 
+\*(T<\fB\-\-has-dap\fR\*(T>
+Whether OPeNDAP is enabled in this build
+.TP 
+\*(T<\fB\-\-has-nc2\fR\*(T>
+Whether NetCDF-2 API is enabled
+.TP 
+\*(T<\fB\-\-has-nc4\fR\*(T>
+Whether NetCDF-4/HDF-5 is enabled in this build
+.TP 
+\*(T<\fB\-\-has-f90\fR\*(T>
+Whether Fortran 90 API is enabled in this build
+.TP 
+\*(T<\fB\-\-has-f03\fR\*(T>
+Whether Fortran 2003 API is enabled in this build
+.TP 
+\*(T<\fB\-\-flibs\fR\*(T>
+Libraries needed to link a Fortran program
+.TP 
+\*(T<\fB\-\-prefix\fR\*(T>
+Install prefix
+.TP 
+\*(T<\fB\-\-includedir\fR\*(T>
+Include directory
+.TP 
+\*(T<\fB\-\-version\fR\*(T>
+Library version

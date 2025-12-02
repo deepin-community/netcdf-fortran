@@ -1,0 +1,7 @@
+usr/bin/nf-config
+usr/include/*
+usr/lib/*/lib*.a
+usr/lib/*/libnetcdff.settings
+usr/lib/*/lib*.so
+usr/lib/*/pkgconfig/netcdf-fortran.pc
+usr/share/man/man3/
