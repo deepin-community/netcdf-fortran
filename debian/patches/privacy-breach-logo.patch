@@ -1,0 +1,15 @@
+Description: Use local logo image to fix privacy-breach-logo lintian error.
+Author: Bas Couwenberg <sebastic@debian.org>
+Forwarded: not-needed
+
+--- a/docs/footer.html
++++ b/docs/footer.html
+@@ -4,7 +4,7 @@
+ <hr size="2"/>
+ <address style="text-align: center;">
+ <a href="https://www.unidata.ucar.edu/software/netcdf/">Return to the Main Unidata NetCDF page.</a><br>
+-<img src="https://docs.unidata.ucar.edu/images/logos/uniLogo.png">
++<img src="netcdf-50x50.png">
+ 
+ <address style="text-align: right;"><small>
+ Generated on $datetime for $projectname. NetCDF is

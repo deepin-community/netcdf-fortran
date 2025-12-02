@@ -1,0 +1,69 @@
+Description: Fix spelling errors.
+ * varaible -> variable
+Author: Bas Couwenberg <sebastic@debian.org>
+Forwarded: https://github.com/Unidata/netcdf-fortran/pull/69
+
+--- a/docs/netcdf-f90-sec6-variables.md
++++ b/docs/netcdf-f90-sec6-variables.md
+@@ -842,7 +842,7 @@ named rh in an existing netCDF dataset n
+ 
+ 
+ 
+-Given the name of a varaible, nf90\_inq\_varid finds the variable ID.
++Given the name of a variable, nf90\_inq\_varid finds the variable ID.
+ 
+ 
+ 
+--- a/docs/netcdf.m4
++++ b/docs/netcdf.m4
+@@ -775,15 +775,15 @@ Learn about a compound type.
+ .HP
+ FDECL(def_vlen, (INCID(), INAME(), INCTYPE(base_typeid), ONCTYPE(xtypep)))
+ .sp
+-Create a varaible length array type.
++Create a variable length array type.
+ .HP
+ FDECL(inq_vlen, (INCID(), INCTYPE(), ONAME(), OSIZET(datum_sizep), ONCTYPE(base_nc_typep)))
+ .sp
+-Learn about a varaible length array type.
++Learn about a variable length array type.
+ .HP
+ FDECL(free_vlen, (nc_vlen_t *vl))
+ .sp
+-Free memory comsumed by reading data of a varaible length array type.
++Free memory comsumed by reading data of a variable length array type.
+ .HP
+ FDECL(put_vlen_element, (INCID(), INCTYPE(), IVOIDP(vlen_element), ISIZET(len), IVOIDP(data)))
+ .sp
+--- a/docs/netcdf_fortran.3
++++ b/docs/netcdf_fortran.3
+@@ -342,15 +342,15 @@ Learn about a compound type.
+ .HP
+ \fBinteger function nf_def_vlen(integer \fIncid\fP, character*(*) \fIname\fP, integer \fIbase_typeid\fP, integer \fIxtypep\fP)\fR
+ .sp
+-Create a varaible length array type.
++Create a variable length array type.
+ .HP
+ \fBinteger function nf_inq_vlen(integer \fIncid\fP, integer \fI\fP, character*(*) \fIname\fP, integer \fIdatum_sizep\fP, integer \fIbase_nc_typep\fP)\fR
+ .sp
+-Learn about a varaible length array type.
++Learn about a variable length array type.
+ .HP
+ \fBinteger function nf_free_vlen(nc_vlen_t *vl)\fR
+ .sp
+-Free memory comsumed by reading data of a varaible length array type.
++Free memory comsumed by reading data of a variable length array type.
+ .HP
+ \fBinteger function nf_put_vlen_element(integer \fIncid\fP, integer \fI\fP, void * \fIvlen_element\fP, integer \fIlen\fP, void * \fIdata\fP)\fR
+ .sp
+--- a/docs/old/netcdf-f90.texi
++++ b/docs/old/netcdf-f90.texi
+@@ -5206,7 +5206,7 @@ rh in an existing netCDF dataset named f
+ @findex NF90_INQ_VARID 
+ @cindex NF90_INQ_VARID, example
+ 
+-Given the name of a varaible, nf90_inq_varid finds the variable ID.
++Given the name of a variable, nf90_inq_varid finds the variable ID.
+ 
+ @heading Usage 
+ @example

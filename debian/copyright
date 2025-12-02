@@ -1,22 +1,136 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: template-repository
-Source: https://github.com/deepin-community/template-repository
+Upstream-Name: NetCDF-Fortran
+Upstream-Contact: University Corporation for Atmospheric Research/Unidata
+Source: https://github.com/Unidata/netcdf-fortran/releases
+Files-Excluded: autom4te.cache/*
 
 Files: *
-Copyright: 2023 Tsic404 <liuheng@deepin.org>
-License: GPL-2+
- This package is free software; you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
- (at your option) any later version.
+Copyright: 1993-2022, University Corporation for Atmospheric Research/Unidata
+License: NetCDF
+
+Files: fortran/module_netcdf4_f03.F90
+ fortran/module_netcdf4_nc_interfaces.F90
+ fortran/module_netcdf_f03.F90
+ fortran/module_netcdf_fortv2_c_interfaces.F90
+ fortran/module_netcdf_nc_data.F90
+ fortran/module_netcdf_nc_interfaces.F90
+ fortran/module_netcdf_nf_data.F90
+ fortran/module_netcdf_nf_interfaces.F90
+ fortran/nf_attio.F90
+ fortran/nf_control.F90
+ fortran/nf_dim.F90
+ fortran/nf_fortv2.F90
+ fortran/nf_genatt.F90
+ fortran/nf_geninq.F90
+ fortran/nf_genvar.F90
+ fortran/nf_misc.F90
+ fortran/nf_nc4.F90
+ fortran/nf_var1io.F90
+ fortran/nf_varaio.F90
+ fortran/nf_vario.F90
+ fortran/nf_varmio.F90
+ fortran/nf_varsio.F90
+ nf_test/f03lib_f_interfaces.F90
+Copyright: Richard Weed, Ph.D. <rweed@cavs.msstate.edu>, Center for Advanced Vehicular Systems, Mississippi State University
+License: Apache-2.0
+
+Files: docs/texinfo.tex
+Copyright: 1985-1986, 1988, 1990-2013, Free Software Foundation, Inc.
+License: GPL-3+ with Texinfo exception
+
+Files: debian/*
+Copyright: 2015, Debian GIS Team
+License: BSD-3-Clause
+
+License: NetCDF
+ Portions of this software were developed by the Unidata Program at the
+ University Corporation for Atmospheric Research.
  .
- This package is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
+ Access and use of this software shall impose the following obligations
+ and understandings on the user. The user is granted the right, without
+ any fee or cost, to use, copy, modify, alter, enhance and distribute
+ this software, and any derivative works thereof, and its supporting
+ documentation for any purpose whatsoever, provided that this entire
+ notice appears in all copies of the software, derivative works and
+ supporting documentation.  Further, UCAR requests that the user credit
+ UCAR/Unidata in any publications that result from the use of this
+ software or in any product that includes this software, although this
+ is not an obligation. The names UCAR and/or Unidata, however, may not
+ be used in any advertising or publicity to endorse or promote any
+ products or commercial entity unless specific written permission is
+ obtained from UCAR/Unidata. The user also understands that
+ UCAR/Unidata is not obligated to provide the user with any support,
+ consulting, training or assistance of any kind with regard to the use,
+ operation and performance of this software nor to provide the user
+ with any updates, revisions, new versions or "bug fixes."
+ .
+ THIS SOFTWARE IS PROVIDED BY UCAR/UNIDATA "AS IS" AND ANY EXPRESS OR
+ IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL UCAR/UNIDATA BE LIABLE FOR ANY SPECIAL,
+ INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING
+ FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT,
+ NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION
+ WITH THE ACCESS, USE OR PERFORMANCE OF THIS SOFTWARE.
+
+License: BSD-3-Clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+ 3. The name of the author may not be used to endorse or promote products
+    derived from this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+ IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+ OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+ IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+ NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: GPL-3+ with Texinfo exception
+ texinfo.tex file is free software: you can redistribute it and/or
+ modify it under the terms of the GNU General Public License as
+ published by the Free Software Foundation, either version 3 of the
+ License, or (at your option) any later version.
+ .
+ This texinfo.tex file is distributed in the hope that it will be
+ useful, but WITHOUT ANY WARRANTY; without even the implied warranty
+ of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ General Public License for more details.
  .
  You should have received a copy of the GNU General Public License
- along with this program. If not, see <https://www.gnu.org/licenses/>
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  .
- On Debian systems, the complete text of the GNU General
- Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+ As a special exception, when this file is read by TeX when processing
+ a Texinfo source document, you may use the result without
+ restriction. This Exception is an additional permission under section 7
+ of the GNU General Public License, version 3 ("GPLv3").
+ .
+ On Debian systems, the full text of the GNU General Public License
+ version 3 can be found in the file
+ `/usr/share/common-licenses/GPL-3'.
+
+License: Apache-2.0
+ This software is released under the Apache 2.0 Open Source License. The
+ full text of the License can be viewed at :
+ .
+   http:www.apache.org/licenses/LICENSE-2.0.html
+ .
+ The author grants to the University Corporation for Atmospheric Research
+ (UCAR), Boulder, CO, USA the right to revise and extend the software
+ without restriction. However, the author retains all copyrights and
+ intellectual property rights explicitly stated in or implied by the
+ Apache license
+ .
+ On Debian systems, the complete text of the Apache License can be found
+ in `/usr/share/common-licenses/Apache-2.0'.

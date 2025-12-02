@@ -1,4 +1,44 @@
 #!/usr/bin/make -f
 
+#export DH_VERBOSE=1
+
+# Enable hardening build flags
+export DEB_BUILD_MAINT_OPTIONS=hardening=+all
+
+include /usr/share/dpkg/pkg-info.mk
+
+UPSTREAM_VERSION = $(shell echo $(DEB_VERSION_UPSTREAM) | sed -e 's/\+.*//')
+
+# Verbose test output
+export VERBOSE=1
+
 %:
 	dh $@
+
+override_dh_clean:
+	dh_clean
+
+	$(RM) -r docs/doxygen_sqlite3.db docs/html/ docs/man/ docs/latex/
+
+override_dh_auto_configure:
+	dh_auto_configure -- --enable-doxygen --enable-dot
+
+override_dh_auto_build-arch:
+	dh_auto_build --arch
+
+override_dh_auto_build-indep:
+	dh_auto_build --indep
+	(cd docs && doxygen)
+
+override_dh_auto_test:
+	dh_auto_test --max-parallel=1 || echo "Ignoring test failures"
+
+override_dh_install:
+	$(RM) debian/tmp/usr/lib/*/*.la
+	dh_install
+
+override_dh_installchangelogs:
+	dh_installchangelogs RELEASE_NOTES.md
+
+override_dh_makeshlibs:
+	dh_makeshlibs -- -c0 -v$(UPSTREAM_VERSION)

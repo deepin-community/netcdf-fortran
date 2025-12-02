@@ -1,0 +1,39 @@
+Description: Remove settings that make the build unreproducible.
+Author: Bas Couwenberg <sebastic@debian.org>
+Forwarded: not-needed
+
+--- a/libnetcdff.settings.in
++++ b/libnetcdff.settings.in
+@@ -4,19 +4,16 @@
+ # General
+ -------
+ Library Version:		@PACKAGE_VERSION@
+-Configured On:		        @CONFIG_DATE@
+-Host System:		        @host_cpu@-@host_vendor@-@host_os@
+-Build Directory: 	        @abs_top_builddir@
+ Install Prefix:                 @prefix@
+ 
+ # Compiling Options
+ -----------------
+ Fortran Compiler:               @FC_VERSION@
+-FFLAGS:                         @FFLAGS@
++FFLAGS:                         @FFLAGS_FILTERED@
+ LDFLAGS:		        @LDFLAGS@
+ C Compiler:                     @CC@
+ CPPFLAGS:                       @CPPFLAGS@
+-CFLAGS:                         @CFLAGS@
++CFLAGS:                         @CFLAGS_FILTERED@
+ Shared Library:		        @enable_shared@
+ Static Library:		        @enable_static@
+ Extra libraries:	        @LIBS@
+--- a/configure.ac
++++ b/configure.ac
+@@ -611,6 +611,8 @@ AC_SUBST(HAS_CDF5,[$nc_has_cdf5])
+ AC_SUBST(HAS_PNETCDF,[$nc_has_pnetcdf])
+ AC_SUBST(HAS_NC4_PARALLEL,[$nc_has_parallel4])
+ AC_SUBST(HAS_PARALLEL,[$nc_has_parallel])
++AC_SUBST(FFLAGS_FILTERED,[`echo "$FFLAGS" | sed -e 's@ [[^ ]]*-f\(file\|debug\)-prefix-map=[[^ ]]*@@g'`])
++AC_SUBST(CFLAGS_FILTERED,[`echo "$CFLAGS" | sed -e 's@ [[^ ]]*-f\(file\|debug\)-prefix-map=[[^ ]]*@@g'`])
+ 
+ # Some files need to exist in build directories that do not correspond
+ # to their source directory, or the test program makes an assumption
